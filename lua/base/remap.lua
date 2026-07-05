@@ -18,9 +18,6 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>;", "A;<ESC>")
 vim.keymap.set("n", "<leader>z", "zfa}")
 
--- Auto commands
-vim.api.nvim_create_autocmd("TextYankPost", {
-    pattern  = "*",
-    callback = function() vim.highlight.on_yank { timeout = 400 } end
-})
+-- Search for what's visually selected
+vim.keymap.set("v", "<leader>/", "\"sy/<C-r>s<CR>")
 
