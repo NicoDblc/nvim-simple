@@ -21,3 +21,5 @@ vim.keymap.set("n", "<leader>z", "zfa}")
 -- Search for what's visually selected
 vim.keymap.set("v", "<leader>/", "\"sy/<C-r>s<CR>")
 
+-- Remove unwritten changes
+vim.keymap.set("n", "<leader>rf", ":earlier 1f<CR>")
